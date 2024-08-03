@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Household Income Calculator</title>
+    <link rel="stylesheet" href="/Household-Income-Calculator/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <img class="mango-logo" src="/Household-Income-Calculator/assets/images/Finmango Logo.png" alt="Finmango Logo" width="auto" height="150">
+        <h1>Household Income Calculator</h1>
+        <!-- Form for Spouse #1 -->
+        <div id="spouse1">
+            <h2>Spouse #1 Information</h2>
+            <form  class="form-style" id="spouse1Form">
+                <div class="form-group">
+                    <label for="spouse1Salary">Current/Proposed Salary:</label>
+                    <input type="number" id="spouse1Salary" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse1Bonus">Current/Proposed Bonus:</label>
+                    <input type="number" id="spouse1Bonus" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse1Match">401k Employer Match (%):</label>
+                    <input type="number" id="spouse1Match" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse1Participation">401k Participation:</label>
+                    <input type="number" id="spouse1Participation" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse1HSA">Healthcare Savings Contribution:</label>
+                    <input type="number" id="spouse1HSA" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse1Leave">Paid Medical and Paternity Leave:</label>
+                    <input type="number" id="spouse1Leave" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse1Benefits">Additional Benefits (stock options, etc.):</label>
+                    <input type="number" id="spouse1Benefits" required>
+                </div>
+                <button type="button" onclick="saveSpouse1Info()">Next: Spouse #2</button>
+            </form>
+        </div>
+
+        <!-- Form for Spouse #2 -->
+        <div id="spouse2" style="display: none;">
+            <h2>Spouse #2 Information</h2>
+            <form class="form-style" id="spouse2Form">
+                <div class="form-group">
+                    <label for="spouse2Salary">Current/Proposed Salary:</label>
+                    <input type="number" id="spouse2Salary" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse2Bonus">Current/Proposed Bonus:</label>
+                    <input type="number" id="spouse2Bonus" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse2Match">401k Employer Match (%):</label>
+                    <input type="number" id="spouse2Match" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse2Participation">401k Participation:</label>
+                    <input type="number" id="spouse2Participation" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse2HSA">Healthcare Savings Contribution:</label>
+                    <input type="number" id="spouse2HSA" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse2Leave">Paid Medical and Paternity Leave:</label>
+                    <input type="number" id="spouse2Leave" required>
+                </div>
+                <div class="form-group">
+                    <label for="spouse2Benefits">Additional Benefits (stock options, etc.):</label>
+                    <input type="number" id="spouse2Benefits" required>
+                </div>
+                <button type="button" onclick="calculateHouseholdIncome()">Calculate Household Income</button>
+            </form>
+        </div>
+
+        <!-- Results Section -->
+        <div class="result" id="result"></div>
+        <canvas id="salaryProjectionChart" width="400" height="200"></canvas>
+    </div>
+    <script src="/Household-Income-Calculator/js/calculator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
